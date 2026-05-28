@@ -7,3 +7,10 @@
 - Added new skills and improved component structure
 
 ![Project Screenshot](./screenshot.png)
+
+Different approaches were tested and documented in comments inside the codebase, including:
+
+- full object props
+- destructured props
+- ternary operators
+- short-circuit rendering

@@ -29,7 +29,7 @@ const skills = [
     color: "#5968BA",
   },
   {
-    name: "RestAPI",
+    name: "REST API",
     level: "intermediate",
     color: "#F77F00",
   },
@@ -75,18 +75,26 @@ function Skilllist() {
   return (
     <div className="skill-list">
       {skills.map((skill) => (
+        // <Skill skill={skill.name} color={skill.color} level={skill.level} key={skill.name}/>
         <Skill skill={skill} key={skill.name} />
       ))}
     </div>
   );
 }
 
-function Skill({ skill }) {
+function Skill({ skill, color, level }) {
   return (
-    <span className="skill" style={{ backgroundColor: skill.color }}>
-      {skill.name +
-        `${skill.level === "advanced" ? "💪" : skill.level === "intermediate" ? "👍" : "👶"}`}
-    </span>
+    // <div className="skill" style={{ backgroundColor: color }}>
+    <div className="skill" style={{ backgroundColor: skill.color }}>
+      <span>
+        {skill.name +
+          `${skill.level === "advanced" ? "💪" : skill.level === "intermediate" ? "👍" : "👶"}`}
+      </span>
+      {/* <span>{skill}</span>
+      <span>{level === "beginner" && "👶"}</span>
+      <span>{level === "intermediate" && "👍"}</span>
+      <span>{level === "advanced" && "💪"}</span> */}
+    </div>
   );
 }
 
